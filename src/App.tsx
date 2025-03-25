@@ -7,11 +7,14 @@ import Services from "./pages/Services";
 import NewHeights from "./pages/NewHeights";
 import Footer from "./layout/Footer";
 import Reels from "./component/Reel";
+import Fab from "./component/Fab";
 
 function App() {
   return (
     <>
+      <Fab />
       <Reels />
+      {/* Main sections */}
       <Navbar />
       <Hero />
       <Dream />

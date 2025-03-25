@@ -17,14 +17,14 @@ export default function NewHeights() {
 
         {/* Contact Card */}
         <section className="min-h-screen py-20">
-            <div className="bg-white rounded-[32px] shadow-2xl p-16">
+            <div className="bg-white rounded-[32px] shadow-2xl p-0">
                 <div className="grid grid-cols-2 gap-12">
                     {/* left side */}
                     <div className="relative">
                         <img src={Asset} alt="asset" className="w-[800px] h-[912px] rounded-l-2xl" />
                         <div className="absolute inset-0 flex flex-col justify-start py-15 px-18 gap-14">
                             <motion.h1 
-                                className="font-instrument-sans text-[54px] text-white"
+                                className="font-instrument-sans text-[60px] text-white"
                                 initial={{ scale: 0.8, opacity: 0 }}
                                 whileInView={{ scale: 1, opacity: 1 }}
                                 transition={{ duration: 2, ease: "easeOut" }}
@@ -45,7 +45,7 @@ export default function NewHeights() {
                     </div>
                     
                     {/* right side */}
-                    <div className="space-y-8">
+                    <div className="space-y-8 p-15 py-15" >
                         <div className="space-y-4 font-instrument-sans">
                             <h1 className="text-4xl font-medium text-[30px]">First things first... please share your professional contact details</h1>
                             <h3 className="text-[#444444] text-[20px]">This will help our team get in touch with you within 24 to 48 hours via email.</h3>
