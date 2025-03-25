@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Urbanist:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic');
+@import url('https://fonts.googleapis.com/css?family=Instrument+Sans:regular,500,600,700,italic,500italic,600italic,700italic');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap'); 
+@import "tailwindcss";
+
+@theme {
+    --font-urbanist: "Urbanist", sans-serif;
+    --font-instrument-sans: "Instrument Sans", sans-serif;
+    --font-instrument-serif-italics : "Instrument Serif";
+}
+.italic {
+    font-style: italic;
+}
+
+@layer utilities {
+    .hide-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;  /* Chrome, Safari and Opera */
+    }
+  }
