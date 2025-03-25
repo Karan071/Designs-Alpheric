@@ -27,15 +27,12 @@ const questions = [
 
 export default function CardSection() {
     const [currentStep, setCurrentStep] = useState<number>(1);
-    const [isRotated, setIsRotated] = useState<Boolean>(true);
 
     const handleAnswer = (answer: string | boolean) => {
         console.log(`Question ${currentStep}:`, answer);
-        setIsRotated(false);
         setTimeout(() => {
             if (currentStep < questions.length) {
                 setCurrentStep((prev) => prev + 1);
-                setIsRotated(true);
             }
         }, 500); 
     };
