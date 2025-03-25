@@ -1,9 +1,11 @@
+import React from "react";
+import { motion } from "framer-motion";
 import { MoveRight } from "lucide-react";
+// card images
 import asset1 from "../assets/carousel/asset1.png";
 import asset2 from "../assets/carousel/asset2.png";
 import asset3 from "../assets/carousel/asset3.png";
 import asset4 from "../assets/carousel/asset4.png";
-import React from "react";
 
 const cardData = [
     {
@@ -54,7 +56,7 @@ export default function Carousel() {
         e.preventDefault();
         
         const x = e.pageX - (carouselRef.current?.offsetLeft || 0);
-        const walk = (x - startX) * 2; 
+        const walk = (x - startX) * 1;
         if (carouselRef.current) {
             carouselRef.current.scrollLeft = scrollLeft - walk;
         }
@@ -63,14 +65,29 @@ export default function Carousel() {
     return (
         <div
             ref={carouselRef}
-            className="flex gap-6 overflow-x-auto px-4 py-8 cursor-grab active:cursor-grabbing snap-x snap-mandatory hide-scrollbar"
+            className="flex gap-6 overflow-x-auto px-4 py-8 cursor-grab active:cursor-grabbing snap-x snap-mandatory hide-scrollbar scroll-smooth"
             onMouseDown={startDragging}
             onMouseUp={stopDragging}
             onMouseLeave={stopDragging}
             onMouseMove={onDrag}
         >
             {cardData.map((items, index) => (
-                <div key={index} className="space-y-4  snap-center">
+                <motion.div
+                    key={index}
+                    initial={{ x: "-100%", opacity: 0 }}
+                    whileInView={{ x: 0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        type: "tween",
+                        duration: 2,
+                        ease: "easeOut",
+                        opacity: {
+                            duration: 2,
+                            ease: "easeIn"
+                        }
+                    }}
+                    className="space-y-4 snap-center"
+                >
                     <div className="relative rounded-2xl overflow-hidden">
                         <div className="h-[492px] w-[849px]">
                             <img
@@ -89,11 +106,10 @@ export default function Carousel() {
                                     <MoveRight className="w-30 h-15" />
                                 </button>
                             </div>
-
                         </div>
                     </div>
                     <p className="text-black text-[40px] font-urbanist font-semibold">{items.description}</p>
-                </div>
+                </motion.div>
             ))}
         </div>
     );

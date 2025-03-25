@@ -10,17 +10,17 @@ const questions = [
     },
     {
         id: 2,
-        text: "Have you implemented automated testing in your development pipeline?",
+        text: "Are you looking for a unique brand identity that sets you apart in your industry?",
         type: "standard",
     },
     {
         id: 3,
-        text: "Is your team using agile methodologies effectively?",
+        text: "Do you want to validate your idea with research-driven insights before launching?",
         type: "standard",
     },
     {
         id: 4,
-        text: `The Heart of Enterprise Solutions\n Why it's All About People, Not Just Technology`,
+        text: "From Idea to Impact Turning Your Vision into a Market-Ready Reality",
         type: "special",
     },
 ];

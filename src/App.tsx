@@ -6,18 +6,20 @@ import CardSection from "./pages/CardSection";
 import Services from "./pages/Services";
 import NewHeights from "./pages/NewHeights";
 import Footer from "./layout/Footer";
+import Reels from "./component/Reel";
 
 function App() {
   return (
     <>
+      <Reels />
       <Navbar />
       <Hero />
-      <Dream/>
-      <Project/>
-      <CardSection/>
-      <Services/>
-      <NewHeights/>
-      <Footer/>
+      <Dream />
+      <Project />
+      <CardSection />
+      <Services />
+      <NewHeights />
+      <Footer />
     </>
   )
 }

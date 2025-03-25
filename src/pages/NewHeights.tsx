@@ -1,9 +1,18 @@
 import Asset from "../assets/contactImage.png";
+import { motion } from "framer-motion";
 
 export default function NewHeights() {
     return <div className="mx-[120px] my-20">
         <section className="h-screen flex items-center text-center mx-[200px]">
-            <h1 className="text-[120px] font-semibold font-instrument-sans">So, are you ready to take your business to new heights?</h1>
+            <motion.h1 
+                className="text-[120px] font-semibold font-instrument-sans"
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 1.2, ease: "easeOut" }}
+                viewport={{ once: true }}
+            >
+                So, are you ready to take your business to new heights?
+            </motion.h1>
         </section>
 
         {/* Contact Card */}
@@ -14,8 +23,24 @@ export default function NewHeights() {
                     <div className="relative">
                         <img src={Asset} alt="asset" className="w-[800px] h-[912px] rounded-l-2xl" />
                         <div className="absolute inset-0 flex flex-col justify-start py-15 px-18 gap-14">
-                            <h1 className="font-instrument-sans text-[54px] text-white">First things first... please share your contact details</h1>
-                            <h2 className="font-instrument-sans text-[32px] text-white">This will help our team get in touch with you within <span className="font-bold">24 to 48 hours via email.</span></h2>
+                            <motion.h1 
+                                className="font-instrument-sans text-[54px] text-white"
+                                initial={{ scale: 0.8, opacity: 0 }}
+                                whileInView={{ scale: 1, opacity: 1 }}
+                                transition={{ duration: 2, ease: "easeOut" }}
+                                viewport={{ once: true }}
+                            >
+                                First things first... please share your contact details
+                            </motion.h1>
+                            <motion.h2 
+                                className="font-instrument-sans text-[32px] text-white"
+                                initial={{ scale: 0.8, opacity: 0 }}
+                                whileInView={{ scale: 1, opacity: 1 }}
+                                transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+                                viewport={{ once: true }}
+                            >
+                                This will help our team get in touch with you within <span className="font-bold">24 to 48 hours via email.</span>
+                            </motion.h2>
                         </div>
                     </div>
                     
